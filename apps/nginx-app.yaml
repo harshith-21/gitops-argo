@@ -5,6 +5,7 @@ metadata:
   namespace: argocd
 
 spec:
+  project: default
   source:
     repoURL: https://github.com/harshith-21/gitops-argo.git
     targetRevision: main
@@ -12,4 +13,9 @@ spec:
 
   destination:
     server: https://kubernetes.default.svc
-    namespace: nginx-test
+    namespace: default
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
