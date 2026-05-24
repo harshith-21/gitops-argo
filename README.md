@@ -19,7 +19,9 @@ gitops-repo/
 
 Bootstrap once:
 
+```
 kubectl apply -f root-app.yaml
+```
 
 After that:
 - adding app YAML to `/apps` auto-creates apps
